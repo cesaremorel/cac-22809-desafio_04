@@ -1,0 +1,38 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fw-100{
+    font-weight: 100;
+}
+
+.fw-400{
+    font-weight: 400;
+}
+
+.fw-700{
+    font-weight: 700;
+}
+
+.fw-900{
+    font-weight: 900;
+}
+
+/**************** Backgrounds colors ****************/
+body {
+    background-color: #2b2d42;
+}
+section.exercise:nth-child(first) 
+{
+    height: 100vh;
+}
+section.exercise:nth-child(odd) 
+{
+    background-color: #666;
+}
+
+section.exercise:nth-child(even) 
+{
+    background-color: #2b2d42
+}
+
