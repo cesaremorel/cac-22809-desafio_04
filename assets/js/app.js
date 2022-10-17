@@ -1,3 +1,4 @@
+
 const getNumberArrayFromTo = (from, to) => {
     let numbers = [];
     for ( i = from; i <= to; i++){
@@ -12,6 +13,7 @@ const getQuiniNumbersArray = () => {
     let limit = 6
     let randomNumbers = []
 
+    // La idea es ir tomando un numero de la colección por vez para evitar repeticiones
     for ( i = 0; i < limit; i++){
         var pickId = Math.floor(Math.random() * remainingNumbers.length )
         randomNumbers.push(remainingNumbers[pickId])
