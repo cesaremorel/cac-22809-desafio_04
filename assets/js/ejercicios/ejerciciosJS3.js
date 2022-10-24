@@ -202,9 +202,9 @@ const mesesDelAño = (array) => {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  let selectedMonths = [ 'Enero', 'Marzo', 'Noviembre' ]
+  let selectedMonths = [ 'Enero', 'Marzo', 'Noviembre']
   let filteredMonths = array.filter(month => selectedMonths.includes(month)).sort()
-  return filteredMonths.length === 3 ? filteredMonths: 'No se encontraron los meses pedidos'
+  return filteredMonths.length === selectedMonths.length ? filteredMonths: 'No se encontraron los meses pedidos'
 }
 console.assert(JSON.stringify(mesesDelAño(["Noviembre", "Enero", "Marzo", "Diciembre"])) === JSON.stringify(["Enero", "Marzo", "Noviembre"]), 'mesesDelAño_a01')
 console.assert(mesesDelAño(["Enero", "Noviembre", "Diciembre"]) === 'No se encontraron los meses pedidos', 'mesesDelAño_a02')
@@ -232,7 +232,8 @@ const breakStatement = (numero) => {
   // Tu código:
   let arrayResult = []
   for ( i=0; i < 10; i++){
-    (i === 0) ? arrayResult[i] = numero + 2: arrayResult.push(arrayResult[arrayResult.length -1] + 2) 
+    numero += 2
+    arrayResult.push(numero) 
     if ( arrayResult[i] === i + 1 ) {   
       return 'Se interrumpió la ejecución'
       break
