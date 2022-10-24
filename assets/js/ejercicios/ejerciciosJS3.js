@@ -263,7 +263,8 @@ const continueStatement = (numero) => {
     if ( i + 1 === 5 ) {   
       continue
     }
-    (i === 0) ? arrayResult[i] = numero + 2: arrayResult.push(arrayResult[arrayResult.length -1] + 2)  
+    numero += 2
+    arrayResult.push(numero)  
   }
   return arrayResult
 }
